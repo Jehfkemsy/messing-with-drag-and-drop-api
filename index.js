@@ -4,6 +4,7 @@ const contentEl = document.getElementById("content");
 new Array(1000).fill(null).map((v, i) => {
   const el = document.createElement("div");
   el.className = "folder-label";
+  el.draggable = true;
 
   const img = document.createElement("img");
   img.src = "icons8-folder-60.png";
@@ -16,4 +17,14 @@ new Array(1000).fill(null).map((v, i) => {
   el.appendChild(p);
 
   sidebarEl.appendChild(el);
+});
+
+document.querySelectorAll(".folder-label").forEach((folderEl) => {
+  folderEl.addEventListener("dragstart", (e) => {
+    e.target.style.opacity = 0.3;
+  });
+
+  folderEl.addEventListener("dragend", (e) => {
+    e.target.style.opacity = 1;
+  });
 });
