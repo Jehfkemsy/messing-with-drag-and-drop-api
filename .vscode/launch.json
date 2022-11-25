@@ -4,18 +4,19 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-    {
-        "name": "Attach to Chrome",
-        "port": 9222,
-        "request": "attach",
-        "type": "chrome",
-        "webRoot": "${workspaceFolder}"
-    },
         {
-            "type": "chrome",
+            "name": "Launch Chrome",
+            "port": 8080,
             "request": "launch",
-            "name": "Open index.html",
-            "file": "/Users/jehfdenezaire/Projects/messing-with-drag-and-drop-api/index.html"
-        }
+            "type": "chrome",
+            "webRoot": "${workspaceFolder}",
+        },
+        {
+            "name": "Attach to Chrome",
+            "port": 9222,
+            "request": "attach",
+            "type": "chrome",
+            "webRoot": "${workspaceFolder}"
+        },
     ]
 }
