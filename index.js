@@ -1,9 +1,5 @@
-console.log("Hello there. General Kenobi!");
-
 const sidebarEl = document.getElementById("folders");
 const contentEl = document.getElementById("content");
-
-console.log(sidebarEl, contentEl);
 
 new Array(1000).fill(null).map((v, i) => {
   const el = document.createElement("div");
